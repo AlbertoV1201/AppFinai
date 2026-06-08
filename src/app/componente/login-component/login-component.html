@@ -1,0 +1,8 @@
+<h2>Iniciar sesión</h2>
+<form (ngSubmit)="login()">
+  <input name="correo"     [(ngModel)]="correo"     placeholder="Correo" type="email" required>
+  <input name="contrasena" [(ngModel)]="contrasena" placeholder="Contraseña" type="password" required>
+  <button type="submit">Entrar</button>
+</form>
+<p>{{ mensaje }}</p>
+<a routerLink="/registro">Crear cuenta</a>

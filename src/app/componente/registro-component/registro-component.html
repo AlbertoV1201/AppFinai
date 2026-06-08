@@ -1,0 +1,50 @@
+<h2>Crear Cuenta</h2>
+
+<form (ngSubmit)="registrar()">
+  <table cellspacing="40" cellpadding="5">
+    <tr>
+      <td>
+        <label>Nombre</label><br>
+        <input name="nombre" [(ngModel)]="usuario.nombre" required>
+      </td>
+      <td>
+        <label>Apellido</label><br>
+        <input name="apellido" [(ngModel)]="usuario.apellido" required>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <label>Correo</label><br>
+        <input
+          name="correo"
+          [(ngModel)]="usuario.correo"
+          type="email"
+          placeholder="usuario@gmail.com"
+          required>
+      </td>
+      <td>
+        <label>Teléfono</label><br>
+        <input name="telefono" [(ngModel)]="usuario.telefono">
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <label>Contraseña</label><br>
+        <input
+          name="contrasena"
+          [(ngModel)]="usuario.contrasena"
+          type="password"
+          required>
+      </td>
+
+      <td align="center">
+        <button type="submit">Crear</button>
+      </td>
+    </tr>
+  </table>
+</form>
+
+<p>{{ mensaje }}</p>
+<a routerLink="/login">Ya tengo cuenta</a>
