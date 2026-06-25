@@ -1,0 +1,73 @@
+<mat-card class="meta-card">
+
+  <mat-card-title>Metas</mat-card-title>
+
+  <mat-card-content>
+
+    <form [formGroup]="metaForm" class="meta-form">
+
+      <div class="campo">
+        <label>Nombre de Meta</label>
+        <input
+          matInput
+          formControlName="nombreMeta">
+      </div>
+
+      <div class="campo">
+        <label>Monto</label>
+        <input
+          matInput
+          type="number"
+          formControlName="montoObjetivo">
+      </div>
+
+      <div class="campo fecha">
+        <label>Fecha</label>
+
+        <mat-form-field appearance="outline">
+          <input
+            matInput
+            [matDatepicker]="picker"
+            formControlName="fechaLimite">
+
+          <mat-datepicker-toggle
+            matSuffix
+            [for]="picker">
+          </mat-datepicker-toggle>
+
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+      </div>
+
+      <div class="campo">
+        <label>Descripción</label>
+
+        <textarea
+          rows="5"
+          formControlName="descripcion">
+        </textarea>
+      </div>
+
+      <button
+        class="btn-confirmar"
+        mat-raised-button
+        color="primary"
+        type="button"
+        (click)="registrar()">
+        Confirmar
+      </button>
+
+      <button
+        class="btn-regresar"
+        mat-raised-button
+        color="primary"
+        type="button"
+        (click)="regresar()">
+        Regresar
+      </button>
+
+    </form>
+
+  </mat-card-content>
+
+</mat-card>

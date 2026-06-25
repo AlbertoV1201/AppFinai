@@ -1,0 +1,26 @@
+<h1 class="page-title">Presupuestos</h1>
+
+<button class="crear-card" type="button" mat-raised-button color="primary" (click)="irCrear()">
+  <span>Crear<br>Presupuesto</span>
+  <strong>+</strong>
+</button>
+
+<div class="tabla-container mat-elevation-z8" [hidden]="dataSource.data.length === 0">
+  <table mat-table [dataSource]="dataSource" matSort>
+
+    <ng-container matColumnDef="nombrePresupuesto">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Nombre </th>
+      <td mat-cell *matCellDef="let element"> {{ element.nombrePresupuesto }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="montoPromedioMensual">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Monto </th>
+      <td mat-cell *matCellDef="let element"> S/ {{ element.montoPromedioMensual }} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+  <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+</div>

@@ -1,0 +1,169 @@
+.dashboard-card {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+  background: transparent !important;
+}
+
+.dashboard-card mat-card-content {
+  padding: 0 !important;
+}
+
+.dashboard-card h1 {
+  font-size: 28px;
+  line-height: 1.2;
+  font-weight: 800;
+  margin: 0 0 34px;
+  color: #242730;
+}
+
+.saldo-card {
+  width: min(720px, 70vw);
+  height: 55px;
+  background: #fff;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  padding: 0 20px;
+  box-shadow: 0 12px 28px rgba(20, 25, 40, 0.07);
+}
+
+.saldo-card span:not(.saldo-icon) {
+  font-size: 22px;
+  color: #343842;
+}
+
+.saldo-icon {
+  width: 28px;
+  height: 28px;
+  display: grid;
+  place-items: center;
+  font-size: 21px;
+}
+
+.acciones {
+  width: min(660px, 80vw);
+  display: flex;
+  justify-content: space-between;
+  gap: 70px;
+  margin: 108px auto 72px;
+}
+
+.accion {
+  width: 255px;
+  height: 92px;
+  background: #fff;
+  border-radius: 9px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 28px 0 22px;
+  cursor: pointer;
+  box-shadow: 0 14px 32px rgba(20, 25, 40, 0.08);
+}
+
+.accion span {
+  font-size: 28px;
+  line-height: 1.25;
+  font-weight: 500;
+  color: #6a6d76;
+}
+
+.accion-icon {
+  width: 58px;
+  height: 58px;
+  border-radius: 17px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+}
+
+.ingreso-icon {
+  background: #d9f8e8;
+}
+
+.gasto-icon {
+  background: #f8d3d8;
+}
+
+.tabla-container {
+  width: min(820px, 88vw);
+  margin: 0 auto;
+  padding: 28px 22px 36px;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 14px 32px rgba(20, 25, 40, 0.07) !important;
+}
+
+.tabla-header {
+  margin: 0 0 16px;
+}
+
+.tabla-header h2 {
+  font-size: 22px;
+  font-weight: 800;
+  margin: 0;
+  color: #2b2f38;
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  overflow: hidden;
+}
+
+.mat-mdc-header-row {
+  height: 42px !important;
+  background: #f1f4fa !important;
+}
+
+.mat-mdc-header-cell {
+  font-size: 12px;
+  font-weight: 700;
+  color: #1f2937;
+  text-align: center;
+  border: 0 !important;
+}
+
+.mat-mdc-cell {
+  height: 70px;
+  font-size: 13px;
+  color: #4b5563;
+  text-align: center;
+}
+
+.ingreso-text {
+  color: #0fbf5f;
+  font-weight: 800;
+}
+
+.gasto-text {
+  color: #ef4444;
+  font-weight: 800;
+}
+
+.ingreso-badge {
+  background: #62f248;
+  color: #0f7e2c;
+  padding: 9px 24px;
+  border-radius: 14px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.gasto-badge {
+  background: #f50404;
+  color: #831919;
+  padding: 9px 24px;
+  border-radius: 14px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+mat-paginator {
+  background: transparent !important;
+}

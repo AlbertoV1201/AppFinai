@@ -1,0 +1,35 @@
+<mat-card class="movimiento-card">
+
+  <mat-card-title>Ingrese Monto</mat-card-title>
+
+  <mat-card-content>
+
+    <form [formGroup]="movimientoForm" class="movimiento-form">
+
+      <input
+        class="monto-input"
+        type="number"
+        formControlName="monto"
+        placeholder="0.00">
+
+      <button
+        mat-raised-button
+        color="primary"
+        type="button"
+        (click)="registrar()">
+        Confirmar
+      </button>
+
+      <button
+        mat-raised-button
+        color="primary"
+        type="button"
+        (click)="regresar()">
+        Regresar
+      </button>
+
+    </form>
+
+  </mat-card-content>
+
+</mat-card>

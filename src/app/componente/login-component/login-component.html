@@ -1,8 +1,38 @@
-<h2>Iniciar sesión</h2>
-<form (ngSubmit)="login()">
-  <input name="correo"     [(ngModel)]="correo"     placeholder="Correo" type="email" required>
-  <input name="contrasena" [(ngModel)]="contrasena" placeholder="Contraseña" type="password" required>
-  <button type="submit">Entrar</button>
-</form>
-<p>{{ mensaje }}</p>
-<a routerLink="/registro">Crear cuenta</a>
+<div class="auth-page">
+  <div class="shape shape-one"></div>
+  <div class="shape shape-two"></div>
+  <div class="shape shape-three"></div>
+
+  <mat-card class="example-card auth-card">
+    <mat-card-title>Inicio de Sesion</mat-card-title>
+    <p class="subtitle">Por favor ingrese su correo y contraseña</p>
+
+    <mat-card-content>
+      <form [formGroup]="usuarioForm" (ngSubmit)="onSubmit()" class="auth-form">
+        <label class="campo-label">Username</label>
+        <input class="auth-input" matInput formControlName="correo" placeholder="correo@gmail.com" />
+
+        <div class="label-row">
+          <label class="campo-label">Password</label>
+          <a class="forgot" href="javascript:void(0)">¿Olvido su contraseña?</a>
+        </div>
+
+        <input class="auth-input" matInput type="password" formControlName="contrasena" placeholder="••••••" />
+
+        <label class="recordar">
+          <input type="checkbox" checked>
+          <span>Recordar Contraseña</span>
+        </label>
+
+        <button type="submit" mat-raised-button color="primary" class="btn-principal">
+          Ingresar
+        </button>
+      </form>
+
+      <p class="registro-texto">
+        ¿Aún no tiene cuenta?
+        <a routerLink="/registro">Cree su propia cuenta</a>
+      </p>
+    </mat-card-content>
+  </mat-card>
+</div>

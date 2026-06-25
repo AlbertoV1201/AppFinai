@@ -1,0 +1,54 @@
+.presupuesto-card {
+  width: 380px;
+  margin: 40px auto;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+mat-card-title {
+  display: block;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 35px;
+}
+
+.presupuesto-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.campo {
+  margin-bottom: 25px;
+}
+
+.campo label {
+  display: block;
+  color: #2563eb;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.campo input {
+  width: 100%;
+  box-sizing: border-box;
+
+  border: 1px solid #d6d9e0;
+  border-radius: 5px;
+
+  padding: 10px;
+  background: #eef1f7;
+  font-size: 14px;
+}
+
+.btn-confirmar {
+  width: 75%;
+  height: 42px;
+  margin: 50px auto 25px auto;
+}
+
+.btn-regresar {
+  width: 100px;
+  height: 38px;
+  margin: 0 auto;
+}

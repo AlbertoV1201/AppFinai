@@ -1,0 +1,62 @@
+.movimiento-card {
+  width: 540px;
+  min-height: 640px;
+  margin: 40px auto 0;
+  padding: 30px 42px;
+  border-radius: 17px;
+  background: #fff;
+  border: 1px solid #dfe2ea;
+}
+
+mat-card-title {
+  display: block;
+  text-align: center;
+  font-size: 28px;
+  font-weight: 800;
+  color: #252832;
+  margin: 0 0 118px;
+}
+
+mat-card-content {
+  padding: 0 !important;
+}
+
+.movimiento-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.monto-input {
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: center;
+  font-size: 55px;
+  font-weight: 800;
+  color: #242730;
+  margin-bottom: 105px;
+  background: transparent;
+}
+
+.monto-input::placeholder {
+  color: #242730;
+  opacity: 1;
+}
+
+button:first-of-type {
+  width: 360px;
+  height: 48px;
+  margin-bottom: 116px;
+  border-radius: 6px !important;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+button:last-of-type {
+  width: 118px;
+  height: 38px;
+  border-radius: 6px !important;
+  font-size: 15px;
+  font-weight: 700;
+}

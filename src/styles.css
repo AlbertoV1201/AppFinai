@@ -1,1 +1,85 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --azul: #4f80f8;
+  --azul-fuerte: #0b6fd3;
+  --fondo: #f5f6fb;
+  --texto: #22252d;
+  --gris: #70747f;
+  --borde: #e6e8f0;
+  --sidebar: 210px;
+  --topbar: 58px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--texto);
+  background: var(--fondo);
+}
+
+button,
+input,
+textarea {
+  font-family: inherit;
+}
+
+app-root {
+  display: block;
+  min-height: 100vh;
+}
+
+app-home-component,
+app-presupuesto-component,
+app-presupuesto-nuevo-component,
+app-meta-component,
+app-meta-nuevo-component,
+app-recomendacion-component,
+app-registro-monto-component {
+  display: block;
+  min-height: 100vh;
+  margin-left: var(--sidebar);
+  padding: calc(var(--topbar) + 30px) 30px 45px;
+  background: var(--fondo);
+}
+
+.mat-mdc-card {
+  --mdc-elevated-card-container-elevation: none;
+  box-shadow: none !important;
+}
+
+.mat-mdc-raised-button.mat-primary,
+.mat-mdc-unelevated-button.mat-primary {
+  --mdc-protected-button-container-color: var(--azul);
+  --mdc-protected-button-label-text-color: #fff;
+}
+
+.mat-mdc-table {
+  background: transparent !important;
+}
+
+.mat-mdc-header-cell,
+.mat-mdc-cell {
+  border-bottom-color: #eef0f6 !important;
+}
+
+@media (max-width: 900px) {
+  :root {
+    --sidebar: 170px;
+  }
+
+  app-home-component,
+  app-presupuesto-component,
+  app-presupuesto-nuevo-component,
+  app-meta-component,
+  app-meta-nuevo-component,
+  app-recomendacion-component,
+  app-registro-monto-component {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+}

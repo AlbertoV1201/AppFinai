@@ -1,0 +1,152 @@
+:host {
+  display: block;
+  min-height: 100vh;
+}
+
+.auth-page {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #4f80f8;
+}
+
+.shape {
+  position: absolute;
+  border-radius: 120px;
+  background: rgba(255, 255, 255, 0.08);
+  pointer-events: none;
+}
+
+.shape-one {
+  width: 640px;
+  height: 310px;
+  left: -170px;
+  bottom: -42px;
+  transform: rotate(-8deg);
+}
+
+.shape-two {
+  width: 610px;
+  height: 360px;
+  right: -70px;
+  top: -70px;
+  transform: rotate(13deg);
+}
+
+.shape-three {
+  width: 380px;
+  height: 620px;
+  left: 285px;
+  top: -80px;
+  transform: rotate(-8deg);
+}
+
+.example-card.auth-card {
+  width: 500px;
+  min-height: 570px;
+  padding: 62px 44px 42px;
+  border-radius: 17px;
+  background: #fff;
+  position: relative;
+  z-index: 2;
+}
+
+mat-card-title {
+  display: block;
+  text-align: center;
+  font-size: 28px;
+  font-weight: 800;
+  color: #20232a;
+  margin: 0 0 12px;
+}
+
+.subtitle {
+  text-align: center;
+  color: #5f6471;
+  font-size: 14px;
+  margin: 0 0 32px;
+}
+
+mat-card-content {
+  display: block;
+  padding: 0 !important;
+}
+
+.campo-label {
+  display: block;
+  color: #4b5563;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.label-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 28px;
+}
+
+.forgot,
+.registro-texto a {
+  color: #4f80f8;
+  font-size: 13px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.auth-input {
+  width: 100%;
+  height: 47px;
+  border: 1px solid #d9dde6;
+  border-radius: 6px;
+  background: #f0f3f8;
+  padding: 0 14px;
+  font-size: 14px;
+  color: #1f2937;
+  outline: none;
+}
+
+.auth-input:focus {
+  border-color: #82a5ff;
+  box-shadow: 0 0 0 3px rgba(79, 128, 248, 0.12);
+}
+
+.recordar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #6b7280;
+  font-size: 13px;
+  margin: 16px 0 46px;
+}
+
+.recordar input {
+  width: 17px;
+  height: 17px;
+  accent-color: #4f80f8;
+}
+
+.btn-principal {
+  width: 82%;
+  height: 45px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 6px !important;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.registro-texto {
+  margin: 18px 0 0;
+  text-align: center;
+  color: #70747f;
+  font-size: 13px;
+}
+
+.registro-texto a {
+  margin-left: 14px;
+  text-decoration: underline;
+}

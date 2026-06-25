@@ -1,0 +1,61 @@
+.page-title {
+  font-size: 28px;
+  font-weight: 800;
+  color: #252832;
+  margin: 0 0 42px;
+}
+
+.crear-card {
+  width: 260px;
+  height: 95px;
+  border-radius: 10px !important;
+  background: #fff !important;
+  color: #6a6d76 !important;
+  box-shadow: 0 14px 32px rgba(20, 25, 40, 0.08) !important;
+  display: flex !important;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 13px 0 20px !important;
+  text-align: left;
+}
+
+.crear-card span {
+  font-size: 27px;
+  line-height: 1.25;
+  font-weight: 500;
+}
+
+.crear-card strong {
+  width: 44px;
+  height: 44px;
+  border-radius: 5px;
+  display: grid;
+  place-items: center;
+  background: #0b6fd3;
+  color: #fff;
+  font-size: 44px;
+  line-height: 1;
+  font-weight: 400;
+}
+
+.tabla-container {
+  width: min(780px, 88vw);
+  margin: 55px 0 0;
+  padding: 24px;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 12px 26px rgba(20, 25, 40, 0.07) !important;
+}
+
+table {
+  width: 100%;
+}
+
+.mat-mdc-header-row {
+  background: #f1f4fa !important;
+}
+
+.mat-mdc-header-cell,
+.mat-mdc-cell {
+  text-align: center;
+}
