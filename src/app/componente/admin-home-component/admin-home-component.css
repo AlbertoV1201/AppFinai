@@ -1,0 +1,102 @@
+.titulo{
+
+  margin:35px;
+
+  font-size:42px;
+
+  font-weight:bold;
+
+}
+
+.dashboard{
+
+  display:grid;
+
+  grid-template-columns:repeat(2,300px);
+
+  gap:35px;
+
+  margin-left:35px;
+
+}
+
+.card{
+
+  background:white;
+
+  border-radius:18px;
+
+  box-shadow:0 8px 25px rgba(0,0,0,.08);
+
+  padding:35px;
+
+  transition:.3s;
+
+}
+
+.card:hover{
+
+  transform:translateY(-6px);
+
+}
+
+.numero{
+
+  font-size:45px;
+
+  font-weight:bold;
+
+  color:#4f80f8;
+
+}
+
+.texto{
+
+  margin-top:15px;
+
+  font-size:20px;
+
+  color:#666;
+
+}
+
+.acciones{
+
+  margin:45px 35px;
+
+}
+
+.btn-ticket{
+
+  width:260px;
+
+  height:60px;
+
+  border:none;
+
+  border-radius:12px;
+
+  background:#4f80f8;
+
+  color:white;
+
+  font-size:18px;
+
+  cursor:pointer;
+
+  transition:.3s;
+
+}
+
+.btn-ticket:hover{
+
+  background:#2d63f5;
+
+}
+
+:host{
+  display:block;
+  margin-left:220px;
+  margin-top:80px;
+  padding:30px;
+}

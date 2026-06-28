@@ -1,0 +1,58 @@
+<h1 class="titulo">Nuevo Ticket de Soporte</h1>
+
+<mat-card class="ticket-card">
+
+  <mat-card-content>
+
+    <form [formGroup]="ticketForm">
+
+      <div class="campo">
+
+        <label>Asunto</label>
+
+        <input
+          matInput
+          formControlName="asunto"
+          placeholder="Ingresa el asunto del ticket">
+
+      </div>
+
+      <div class="campo">
+
+        <label>Mensaje</label>
+
+        <textarea
+          rows="8"
+          formControlName="mensaje"
+          placeholder="Describe tu consulta o problema...">
+                </textarea>
+
+      </div>
+
+      <div class="botones">
+
+        <button
+          mat-raised-button
+          color="primary"
+          (click)="registrar()">
+
+          Enviar Ticket
+
+        </button>
+
+        <button
+          mat-stroked-button
+          color="primary"
+          (click)="regresar()">
+
+          Regresar
+
+        </button>
+
+      </div>
+
+    </form>
+
+  </mat-card-content>
+
+</mat-card>

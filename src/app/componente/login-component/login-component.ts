@@ -29,6 +29,7 @@ import { ResponseDto } from '../../model/response-dto';
   styleUrl: './login-component.css',
 })
 export class LoginComponent {
+
   usuarioForm: FormGroup;
 
   fb = inject(FormBuilder);
@@ -36,20 +37,29 @@ export class LoginComponent {
   router = inject(Router);
 
   constructor() {
+
     if (localStorage.getItem('token')) {
       localStorage.clear();
     }
 
     this.usuarioForm = this.fb.group({
+
       correo: ['', Validators.required],
+
       contrasena: ['', Validators.required],
+
     });
+
   }
 
   onSubmit(): void {
+
     if (!this.usuarioForm.valid) {
+
       alert('Formulario inválido');
+
       return;
+
     }
 
     const usuario = new Usuario();
@@ -58,21 +68,37 @@ export class LoginComponent {
     usuario.contrasena = this.usuarioForm.value.contrasena;
 
     this.usuarioService.login(usuario).subscribe({
+
       next: (data: ResponseDto) => {
+
         localStorage.setItem('token', data.token);
         localStorage.setItem('idUsuario', data.idUsuario.toString());
         localStorage.setItem('rol', data.rol);
 
         alert(data.mensaje);
 
-        this.router.navigate(['/home']);
+        if (data.rol === 'ROLE_ADMIN') {
+
+          this.router.navigate(['/admin']);
+
+        } else {
+
+          this.router.navigate(['/home']);
+
+        }
+
       },
 
       error: (err) => {
+
         console.error(err);
 
         alert('Correo o contraseña incorrectos');
-      },
+
+      }
+
     });
+
   }
+
 }

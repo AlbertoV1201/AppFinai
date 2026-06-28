@@ -1,9 +1,12 @@
 import { Component, inject } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+
 import { MatCard, MatCardContent, MatCardTitle } from '@angular/material/card';
 import { MatFormField, MatInput, MatInputModule, MatLabel } from '@angular/material/input';
 import { MatButton } from '@angular/material/button';
+import { MatSelectModule } from '@angular/material/select';
+
 import { PresupuestoService } from '../../services/presupuesto-service';
 import { Presupuesto } from '../../model/presupuesto';
 
@@ -18,13 +21,15 @@ import { Presupuesto } from '../../model/presupuesto';
     MatLabel,
     MatButton,
     MatInputModule,
-    MatInput
+    MatInput,
+    MatSelectModule,
   ],
   templateUrl: './presupuesto-nuevo-component.html',
   styleUrl: './presupuesto-nuevo-component.css',
 })
 export class PresupuestoNuevoComponent {
   presupuestoForm: FormGroup;
+
   fb = inject(FormBuilder);
   presupuestoService = inject(PresupuestoService);
   router = inject(Router);
@@ -32,6 +37,11 @@ export class PresupuestoNuevoComponent {
   constructor() {
     this.presupuestoForm = this.fb.group({
       nombrePresupuesto: ['', Validators.required],
+
+      categoria: ['', Validators.required],
+
+      tipo: ['', Validators.required],
+
       montoPromedioMensual: ['', Validators.required],
     });
   }
@@ -39,12 +49,29 @@ export class PresupuestoNuevoComponent {
   registrar() {
     if (this.presupuestoForm.valid) {
       let presupuesto = new Presupuesto();
-      presupuesto.nombrePresupuesto = this.presupuestoForm.controls['nombrePresupuesto'].value;
-      presupuesto.montoPromedioMensual = this.presupuestoForm.controls['montoPromedioMensual'].value;
+
+      presupuesto.nombrePresupuesto = this.presupuestoForm.value.nombrePresupuesto;
+
+      presupuesto.categoria = this.presupuestoForm.value.categoria;
+
+      presupuesto.tipo = this.presupuestoForm.value.tipo;
+
+      presupuesto.montoPromedioMensual = this.presupuestoForm.value.montoPromedioMensual;
+
       console.log(presupuesto);
+
       this.presupuestoService.insert(presupuesto).subscribe({
-        next: data => { alert('Presupuesto registrado con exito');
-          this.router.navigate(['/presupuesto']); },
+        next: () => {
+          alert('Presupuesto registrado con éxito');
+
+          this.router.navigate(['/presupuesto']);
+        },
+
+        error: (err) => {
+          console.error(err);
+
+          alert('No se pudo registrar el presupuesto');
+        },
       });
     } else {
       alert('Complete todos los campos');

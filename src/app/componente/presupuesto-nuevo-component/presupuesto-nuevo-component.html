@@ -6,19 +6,77 @@
 
     <form [formGroup]="presupuestoForm" class="presupuesto-form">
 
+      <!-- Nombre -->
       <div class="campo">
         <label>Nombre del Presupuesto</label>
+
         <input
           matInput
           formControlName="nombrePresupuesto">
       </div>
 
+      <!-- Categoría -->
       <div class="campo">
-        <label>Monto promedio del mes</label>
+
+        <mat-form-field appearance="outline">
+
+          <mat-label>Categoría</mat-label>
+
+          <mat-select formControlName="categoria">
+
+            <mat-option value="Alimentación">Alimentación</mat-option>
+
+            <mat-option value="Transporte">Transporte</mat-option>
+
+            <mat-option value="Vivienda">Vivienda</mat-option>
+
+            <mat-option value="Salud">Salud</mat-option>
+
+            <mat-option value="Educación">Educación</mat-option>
+
+            <mat-option value="Entretenimiento">Entretenimiento</mat-option>
+
+            <mat-option value="Servicios">Servicios</mat-option>
+
+            <mat-option value="Otros">Otros</mat-option>
+
+          </mat-select>
+
+        </mat-form-field>
+
+      </div>
+
+      <!-- Tipo -->
+      <div class="campo">
+
+        <mat-form-field appearance="outline">
+
+          <mat-label>Tipo</mat-label>
+
+          <mat-select formControlName="tipo">
+
+            <mat-option value="SEMANAL">Semanal</mat-option>
+
+            <mat-option value="MENSUAL">Mensual</mat-option>
+
+            <mat-option value="ANUAL">Anual</mat-option>
+
+          </mat-select>
+
+        </mat-form-field>
+
+      </div>
+
+      <!-- Monto -->
+      <div class="campo">
+
+        <label>Monto promedio del periodo</label>
+
         <input
           matInput
           type="number"
           formControlName="montoPromedioMensual">
+
       </div>
 
       <button
@@ -27,7 +85,9 @@
         color="primary"
         type="button"
         (click)="registrar()">
+
         Confirmar
+
       </button>
 
       <button
@@ -36,7 +96,9 @@
         color="primary"
         type="button"
         (click)="regresar()">
+
         Regresar
+
       </button>
 
     </form>

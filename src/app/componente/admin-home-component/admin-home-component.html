@@ -1,0 +1,85 @@
+<h1 class="titulo">
+
+  Panel del Administrador
+
+</h1>
+
+<div class="dashboard">
+
+  <div class="card">
+
+    <div class="numero">
+
+      {{ panel.totalUsuarios }}
+
+    </div>
+
+    <div class="texto">
+
+      Usuarios
+
+    </div>
+
+  </div>
+
+  <div class="card">
+
+    <div class="numero">
+
+      {{ panel.totalTicketsAbiertos }}
+
+    </div>
+
+    <div class="texto">
+
+      Tickets Abiertos
+
+    </div>
+
+  </div>
+
+  <div class="card">
+
+    <div class="numero">
+
+      {{ panel.totalPresupuestos }}
+
+    </div>
+
+    <div class="texto">
+
+      Presupuestos
+
+    </div>
+
+  </div>
+
+  <div class="card">
+
+    <div class="numero">
+
+      {{ panel.totalMetas }}
+
+    </div>
+
+    <div class="texto">
+
+      Metas
+
+    </div>
+
+  </div>
+
+</div>
+
+<div class="acciones">
+
+  <button
+    class="btn-ticket"
+    (click)="irTickets()">
+
+    Administrar Tickets
+
+  </button>
+
+</div>

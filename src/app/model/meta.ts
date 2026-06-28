@@ -1,9 +1,15 @@
 export class Meta {
   id: number = 0;
-  nombreMeta: string;
+
+  nombreMeta: string = '';
+
   montoObjetivo: number = 0;
-  montoActual: string;
+
+  montoActual: number = 0;
+
   fechaLimite: Date = new Date();
-  descripcion: string;
-  estado: string;
+
+  descripcion: string = '';
+
+  estado: string = '';
 }

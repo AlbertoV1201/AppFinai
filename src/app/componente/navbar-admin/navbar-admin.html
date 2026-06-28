@@ -1,0 +1,68 @@
+<aside class="sidebar">
+
+  <div class="logo">
+
+    <div class="titulo">
+
+      <span>Fin</span><strong>Ai</strong>
+
+    </div>
+
+    <small>Administrador</small>
+
+  </div>
+  <nav class="menu-principal">
+
+    <button
+      type="button"
+      routerLink="/admin"
+      routerLinkActive="activo"
+      [routerLinkActiveOptions]="{ exact: true }">
+
+      Dashboard
+
+
+    </button>
+
+    <button
+      routerLink="/admin/tickets"
+      routerLinkActive="activo">
+
+      Tickets
+
+    </button>
+
+  </nav>
+
+  <div class="menu-inferior">
+
+    <button
+      (click)="cerrarSesion()">
+
+      Cerrar Sesión
+
+    </button>
+
+  </div>
+
+</aside>
+
+<header class="topbar">
+
+  <div class="perfil">
+
+    <div class="avatar">
+
+      👨‍💼
+
+    </div>
+
+    <span>
+
+      Administrador
+
+    </span>
+
+  </div>
+
+</header>

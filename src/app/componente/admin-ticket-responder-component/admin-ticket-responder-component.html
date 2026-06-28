@@ -1,0 +1,102 @@
+<h1 class="page-title">
+
+  Responder Ticket
+
+</h1>
+
+<mat-card class="ticket-card">
+
+  <mat-card-content>
+
+    <!-- Usuario -->
+
+    <div class="campo-info">
+
+      <label>Usuario</label>
+
+      <div class="valor">
+
+        {{ ticket.correoUsuario }}
+
+      </div>
+
+    </div>
+
+    <!-- Asunto -->
+
+    <div class="campo-info">
+
+      <label>Asunto</label>
+
+      <div class="valor">
+
+        {{ ticket.asunto }}
+
+      </div>
+
+    </div>
+
+    <!-- Mensaje -->
+
+    <div class="campo-info">
+
+      <label>Mensaje del Usuario</label>
+
+      <div class="mensaje">
+
+        {{ ticket.mensaje }}
+
+      </div>
+
+    </div>
+
+    <!-- Respuesta -->
+
+    <form
+      [formGroup]="respuestaForm">
+
+      <div class="campo">
+
+        <label>
+
+          Respuesta
+
+        </label>
+
+        <textarea
+          rows="8"
+          formControlName="mensajeRespuesta">
+
+        </textarea>
+
+      </div>
+
+      <div class="botones">
+
+        <button
+          mat-raised-button
+          color="primary"
+          type="button"
+          (click)="responder()">
+
+          Enviar Respuesta
+
+        </button>
+
+        <button
+          mat-stroked-button
+          color="primary"
+          type="button"
+          (click)="router.navigate(['/admin/tickets'])">
+
+          Cancelar
+
+        </button>
+
+      </div>
+
+    </form>
+
+  </mat-card-content>
+
+</mat-card>

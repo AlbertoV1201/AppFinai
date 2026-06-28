@@ -1,0 +1,55 @@
+.page-title{
+
+  margin:35px;
+
+  font-size:38px;
+
+  font-weight:bold;
+
+}
+
+.tabla-container{
+
+  margin:35px;
+
+  background:white;
+
+  border-radius:18px;
+
+  padding:20px;
+
+}
+
+table{
+
+  width:100%;
+
+}
+
+.mat-mdc-header-cell{
+
+  font-weight:bold;
+
+}
+
+.abierto{
+
+  color:#f57c00;
+
+  font-weight:bold;
+
+}
+
+.respondido{
+
+  color:#2e7d32;
+
+  font-weight:bold;
+
+}
+
+button[disabled]{
+
+  opacity:0.85;
+
+}

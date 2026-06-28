@@ -1,5 +1,13 @@
-@if (verNavbar())
-{
+@if (mostrarNavbarUsuario()) {
+
   <app-navbar></app-navbar>
+
 }
-<router-outlet />
+
+@if (mostrarNavbarAdmin()) {
+
+  <app-navbar-admin></app-navbar-admin>
+
+}
+
+<router-outlet></router-outlet>

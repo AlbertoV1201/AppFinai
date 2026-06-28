@@ -1,0 +1,56 @@
+:host{
+  display:block;
+  margin-left:220px;
+  margin-top:80px;
+  padding:30px;
+  box-sizing:border-box;
+}
+
+.page-title{
+  margin:0 0 25px 0;
+  font-size:40px;
+  font-weight:700;
+  color:#1f2937;
+}
+
+.crear-card{
+  margin-bottom:25px;
+  width:220px;
+  height:90px;
+  border-radius:14px;
+  font-size:28px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px;
+}
+
+.crear-card strong{
+  font-size:40px;
+}
+
+.tabla-container{
+  width:100%;
+  background:#fff;
+  border-radius:16px;
+  padding:20px;
+  box-sizing:border-box;
+}
+
+table{
+  width:100%;
+}
+
+.mat-mdc-header-cell{
+  font-weight:bold;
+}
+
+.abierto{
+  color:#f39c12;
+  font-weight:bold;
+}
+
+.respondido{
+  color:#2ecc71;
+  font-weight:bold;
+}

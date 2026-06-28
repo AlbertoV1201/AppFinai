@@ -1,0 +1,170 @@
+<h1 class="page-title">
+
+  Gestión de Tickets
+
+</h1>
+
+<div class="tabla-container mat-elevation-z8">
+
+  <table
+    mat-table
+    [dataSource]="dataSource"
+    matSort>
+
+    <!-- Usuario -->
+
+    <ng-container matColumnDef="correoUsuario">
+
+      <th
+        mat-header-cell
+        *matHeaderCellDef
+        mat-sort-header>
+
+        Usuario
+
+      </th>
+
+      <td
+        mat-cell
+        *matCellDef="let element">
+
+        {{ element.correoUsuario }}
+
+      </td>
+
+    </ng-container>
+
+    <!-- Asunto -->
+
+    <ng-container matColumnDef="asunto">
+
+      <th
+        mat-header-cell
+        *matHeaderCellDef
+        mat-sort-header>
+
+        Asunto
+
+      </th>
+
+      <td
+        mat-cell
+        *matCellDef="let element">
+
+        {{ element.asunto }}
+
+      </td>
+
+    </ng-container>
+
+    <!-- Estado -->
+
+    <ng-container matColumnDef="estado">
+
+      <th
+        mat-header-cell
+        *matHeaderCellDef>
+
+        Estado
+
+      </th>
+
+      <td
+        mat-cell
+        *matCellDef="let element">
+
+        <span
+          [class.abierto]="element.estado === 'ABIERTO'"
+          [class.respondido]="element.estado === 'RESPONDIDO'">
+
+          {{ element.estado }}
+
+        </span>
+
+      </td>
+
+    </ng-container>
+
+    <!-- Fecha -->
+
+    <ng-container matColumnDef="creadoEn">
+
+      <th
+        mat-header-cell
+        *matHeaderCellDef>
+
+        Fecha
+
+      </th>
+
+      <td
+        mat-cell
+        *matCellDef="let element">
+
+        {{ element.creadoEn | date:'dd/MM/yyyy' }}
+
+      </td>
+
+    </ng-container>
+
+    <!-- Acción -->
+
+    <ng-container matColumnDef="accion">
+
+      <th
+        mat-header-cell
+        *matHeaderCellDef>
+
+        Acción
+
+      </th>
+
+      <td
+        mat-cell
+        *matCellDef="let element">
+
+        <button
+          mat-raised-button
+          color="primary"
+          *ngIf="element.estado === 'ABIERTO'"
+          (click)="responder(element)">
+
+          Responder
+
+        </button>
+
+        <button
+          mat-raised-button
+          color="accent"
+          disabled
+          *ngIf="element.estado === 'RESPONDIDO'">
+
+          Respondido
+
+        </button>
+
+      </td>
+
+    </ng-container>
+
+    <tr
+      mat-header-row
+      *matHeaderRowDef="displayedColumns">
+
+    </tr>
+
+    <tr
+      mat-row
+      *matRowDef="let row; columns: displayedColumns;">
+
+    </tr>
+
+  </table>
+
+  <mat-paginator
+    [pageSizeOptions]="[5,10,20]"
+    showFirstLastButtons>
+
+  </mat-paginator>
+
+</div>

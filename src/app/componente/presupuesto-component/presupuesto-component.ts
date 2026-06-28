@@ -21,7 +21,12 @@ import { Presupuesto } from '../../model/presupuesto';
 })
 export class PresupuestoComponent implements AfterViewInit {
   lista: Presupuesto[] = [];
-  displayedColumns: string[] = ['nombrePresupuesto', 'montoPromedioMensual'];
+  displayedColumns: string[] = [
+    'nombrePresupuesto',
+    'categoria',
+    'tipo',
+    'montoPromedioMensual'
+  ];
   dataSource: MatTableDataSource<Presupuesto> = new MatTableDataSource<Presupuesto>();
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;

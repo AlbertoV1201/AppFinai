@@ -1,0 +1,51 @@
+.titulo{
+
+  text-align:center;
+
+  margin:30px;
+
+}
+
+.contenedor{
+
+  display:flex;
+
+  justify-content:center;
+
+  gap:40px;
+
+  flex-wrap:wrap;
+
+}
+
+.card{
+
+  width:320px;
+
+  padding:30px;
+
+  background:white;
+
+  border-radius:15px;
+
+  box-shadow:0 5px 15px rgba(0,0,0,.2);
+
+  cursor:pointer;
+
+  transition:.3s;
+
+  text-align:center;
+
+}
+
+.card:hover{
+
+  transform:translateY(-8px);
+
+}
+
+.card h2{
+
+  font-size:60px;
+
+}

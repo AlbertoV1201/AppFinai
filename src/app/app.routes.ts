@@ -9,7 +9,14 @@ import { MetaNuevoComponent } from './componente/meta-nuevo-component/meta-nuevo
 import { PresupuestoComponent } from './componente/presupuesto-component/presupuesto-component';
 import { PresupuestoNuevoComponent } from './componente/presupuesto-nuevo-component/presupuesto-nuevo-component';
 import { RecomendacionComponent } from './componente/recomendacion-component/recomendacion-component';
-
+import { ReportesComponent } from './componente/reportes-component/reportes-component';
+import { ReportePresupuestoComponent } from './componente/reporte-presupuesto-component/reporte-presupuesto-component';
+import { TicketComponent } from './componente/ticket-component/ticket-component';
+import { TicketNuevoComponent } from './componente/ticket-nuevo-component/ticket-nuevo-component';
+import { AdminHomeComponent } from './componente/admin-home-component/admin-home-component';
+import { AdminTicketComponent } from './componente/admin-ticket-component/admin-ticket-component';
+import { AdminResponderTicketComponent } from './componente/admin-ticket-responder-component/admin-ticket-responder-component';
+import { ReporteMetaComponent } from './componente/reporte-meta-component/reporte-meta-component';
 import { AuthGuard } from './guards/auth-guard';
 
 export const routes: Routes = [
@@ -68,6 +75,53 @@ export const routes: Routes = [
   {
     path: 'recomendaciones',
     component: RecomendacionComponent,
+    canActivate: [AuthGuard],
+  },
+  {
+    path: 'reportes',
+    component: ReportesComponent,
+    canActivate: [AuthGuard],
+  },
+
+  {
+    path: 'reportes/presupuestos',
+    component: ReportePresupuestoComponent,
+    canActivate: [AuthGuard],
+  },
+
+  {
+    path: 'reportes/metas',
+    component: ReporteMetaComponent,
+    canActivate: [AuthGuard],
+  },
+
+  {
+    path: 'tickets',
+    component: TicketComponent,
+    canActivate: [AuthGuard],
+  },
+
+  {
+    path: 'ticket-nuevo',
+    component: TicketNuevoComponent,
+    canActivate: [AuthGuard],
+  },
+
+  {
+    path: 'admin',
+    component: AdminHomeComponent,
+    canActivate: [AuthGuard],
+  },
+
+  {
+    path: 'admin/tickets',
+    component: AdminTicketComponent,
+    canActivate: [AuthGuard],
+  },
+
+  {
+    path: 'admin/tickets/:id',
+    component: AdminResponderTicketComponent,
     canActivate: [AuthGuard],
   },
 ];
